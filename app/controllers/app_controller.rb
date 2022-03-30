@@ -4,4 +4,8 @@ class AppController < ApplicationController
 
   def about
   end
+
+  def help 
+    @help = params
+  end
 end

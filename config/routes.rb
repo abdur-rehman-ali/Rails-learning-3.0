@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   get 'app/index'
   get 'app/about'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get '/about' , to: 'app#about'
+  get '/help/:id', to: 'app#help' , as: 'help'
+  root 'app#index'
+
+
+
 end

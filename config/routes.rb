@@ -7,5 +7,18 @@ Rails.application.routes.draw do
   root 'app#index'
 
 
+  namespace :admin do 
+    resources 'students'
+  end
+
+  #Remove admin prefix from url
+  scope module: :admin do 
+    resources 'students'
+  end
+
+  scope  do 
+    resources 'students'
+  end
+
 
 end
